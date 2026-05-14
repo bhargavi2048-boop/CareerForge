@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results — AI CareerForge</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%233b82f6'/><text y='24' font-size='20' font-family='Arial' fill='white'>⚡</text></svg>"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon">⚡</div>
+    Career<span>Forge</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="assessment.html" class="nav-cta">Take Assessment →</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="team.html">Team</a>
+  <a href="assessment.html">Take Assessment →</a>
+</div>
+
+<div class="results-page">
+
+  <div class="results-header">
+    <div class="hero-badge" style="margin-bottom:1.5rem;">🎉 Assessment Complete</div>
+    <h1 class="section-title">Your Readiness Report</h1>
+    <p style="color:var(--text2);margin-bottom:2rem;">Great job, <strong id="candidateName" style="color:var(--text)">Candidate</strong>! Here's your personalized interview readiness breakdown.</p>
+    
+    <!-- Big Score Ring -->
+    <div class="big-score">
+      <svg viewBox="0 0 200 200" width="200" height="200">
+        <defs>
+          <linearGradient id="bigGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#3b82f6"/>
+            <stop offset="100%" style="stop-color:#6ee7b7"/>
+          </linearGradient>
+        </defs>
+        <circle fill="none" stroke="var(--surface2)" stroke-width="14" cx="100" cy="100" r="90"/>
+        <circle id="bigRingFill" fill="none" stroke="url(#bigGrad)" stroke-width="14" stroke-linecap="round"
+                cx="100" cy="100" r="90"
+                stroke-dasharray="565" stroke-dashoffset="565"
+                style="transition: stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1)"/>
+      </svg>
+      <div class="big-score-center">
+        <div class="big-score-num" id="bigScoreNum">0</div>
+        <div style="font-size:0.7rem;color:var(--text3)">out of 100</div>
+        <div class="big-score-level" id="bigScoreLevel">–</div>
+      </div>
+    </div>
+
+    <!-- Level explanation -->
+    <div id="levelBanner" style="max-width:480px;margin:1.5rem auto;padding:1rem 1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;font-size:0.9rem;color:var(--text2);">
+      Calculating your personalized feedback...
+    </div>
+  </div>
+
+  <!-- DIMENSION CARDS -->
+  <div class="dimension-cards">
+    <div class="dim-card">
+      <h4>💻 Technical</h4>
+      <div class="dim-score" id="dim0Score">–</div>
+      <div class="dim-bar"><div class="dim-bar-fill" id="dim0Bar" style="width:0;background:#3b82f6"></div></div>
+    </div>
+    <div class="dim-card">
+      <h4>📄 Resume</h4>
+      <div class="dim-score" id="dim1Score">–</div>
+      <div class="dim-bar"><div class="dim-bar-fill" id="dim1Bar" style="width:0;background:#6ee7b7"></div></div>
+    </div>
+    <div class="dim-card">
+      <h4>🎤 Communication</h4>
+      <div class="dim-score" id="dim2Score">–</div>
+      <div class="dim-bar"><div class="dim-bar-fill" id="dim2Bar" style="width:0;background:#f59e0b"></div></div>
+    </div>
+    <div class="dim-card">
+      <h4>💼 Portfolio</h4>
+      <div class="dim-score" id="dim3Score">–</div>
+      <div class="dim-bar"><div class="dim-bar-fill" id="dim3Bar" style="width:0;background:#a78bfa"></div></div>
+    </div>
+  </div>
+
+  <!-- RECOMMENDATIONS -->
+  <div class="recommendations">
+    <h3>🎯 Your Personalized Action Plan</h3>
+    <p style="color:var(--text2);font-size:0.88rem;margin-bottom:1.5rem;">Prioritized recommendations based on your assessment. Start with <span style="color:var(--danger);font-weight:600;">HIGH</span> priority items for maximum impact.</p>
+    
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+      <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;">
+        <div class="rec-priority high" style="width:24px;height:24px;font-size:0.7rem;">🔴</div>
+        <span style="color:var(--text2);">High Priority</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;">
+        <div class="rec-priority med" style="width:24px;height:24px;font-size:0.7rem;">🟡</div>
+        <span style="color:var(--text2);">Medium Priority</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;">
+        <div class="rec-priority low" style="width:24px;height:24px;font-size:0.7rem;">🟢</div>
+        <span style="color:var(--text2);">Low Priority</span>
+      </div>
+    </div>
+    
+    <div id="recommendationsList"></div>
+  </div>
+
+  <!-- STUDY PLAN -->
+  <div class="recommendations" style="margin-top:1.5rem;">
+    <h3>📅 30-Day Sprint Plan</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1rem;">
+      <div style="background:var(--surface2);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:var(--accent);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.5rem;">Week 1–2</div>
+        <h4 style="font-size:0.95rem;margin-bottom:0.4rem;">Foundation Fix</h4>
+        <p style="font-size:0.82rem;color:var(--text2);">Update resume, optimize LinkedIn, set up GitHub profile README, and solve 10 easy DSA problems.</p>
+      </div>
+      <div style="background:var(--surface2);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:var(--accent2);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.5rem;">Week 2–3</div>
+        <h4 style="font-size:0.95rem;margin-bottom:0.4rem;">Skill Builder</h4>
+        <p style="font-size:0.82rem;color:var(--text2);">Solve 20 medium DSA problems, complete one certification, and write out STAR stories for 5 experiences.</p>
+      </div>
+      <div style="background:var(--surface2);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:var(--accent3);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.5rem;">Week 3–4</div>
+        <h4 style="font-size:0.95rem;margin-bottom:0.4rem;">Interview Sim</h4>
+        <p style="font-size:0.82rem;color:var(--text2);">Do 5 mock interviews on Pramp, deploy a project, and start applying to target companies.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="results-actions">
+    <button class="btn-primary" id="downloadReport">📥 Download Report</button>
+    <button class="btn-secondary" id="retakeBtn">🔄 Retake Assessment</button>
+    <a href="index.html" class="btn-secondary">🏠 Back to Home</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <div class="logo-icon">⚡</div>
+        Career<span style="color:var(--accent)">Forge</span>
+      </div>
+      <p>AI-powered interview readiness platform helping students land their dream jobs with confidence.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="assessment.html">Take Assessment</a></li>
+        <li><a href="about.html">How It Works</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 AI CareerForge. Built for AI CareerForge Hackathon.</span>
+    <span>Made with ❤️ by Team CareerForge</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/results.js"></script>
+<script>
+  // Set level banner after scores render
+  setTimeout(() => {
+    const s = JSON.parse(sessionStorage.getItem('assessmentScores') || '{"overall":71,"level":"Intermediate"}');
+    const banner = document.getElementById('levelBanner');
+    if (!banner) return;
+    const msgs = {
+      'Interview Ready': '🌟 <strong style="color:var(--success)">You\'re Interview Ready!</strong> Your profile is strong. Focus on fine-tuning and start applying to your target companies now.',
+      'Intermediate': '📈 <strong style="color:var(--accent3)">Getting Close!</strong> You have a solid foundation. Address the highlighted gaps and you\'ll be fully ready within 2-3 weeks.',
+      'Developing': '🛠 <strong style="color:var(--accent)">Keep Building!</strong> You\'re on the right path. Follow the action plan below to make meaningful progress in 30 days.',
+      'Beginner': '🌱 <strong style="color:var(--text2)">Great Start!</strong> Everyone starts somewhere. Your 30-day sprint plan will make a significant difference — commit to it!'
+    };
+    banner.innerHTML = msgs[s.level] || msgs['Intermediate'];
+  }, 500);
+</script>
+</body>
+</html>

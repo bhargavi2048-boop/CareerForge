@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assessment — AI CareerForge</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%233b82f6'/><text y='24' font-size='20' font-family='Arial' fill='white'>⚡</text></svg>"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon">⚡</div>
+    Career<span>Forge</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="assessment.html" class="nav-cta active">Take Assessment →</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="team.html">Team</a>
+  <a href="assessment.html">Take Assessment →</a>
+</div>
+
+<!-- TIMER BAR -->
+<div class="timer-bar">
+  <span class="timer-label">⏱ Time Remaining</span>
+  <div class="timer-track">
+    <div class="timer-progress" id="timerProgress" style="width:0%"></div>
+  </div>
+  <span class="timer-count" id="timerCount">2:00</span>
+</div>
+
+<!-- HERO -->
+<div class="assessment-hero">
+  <div class="hero-badge">Complete in under 2 minutes ⚡</div>
+  <h1 class="section-title">Interview Readiness<br>Assessment</h1>
+  <p class="section-sub" style="margin:0.75rem auto 1.5rem">Answer honestly for the most accurate readiness score and action plan.</p>
+  
+  <div class="progress-dots">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+
+<!-- ASSESSMENT FORM -->
+<div class="assessment-form">
+
+  <!-- STEP 1: BASICS -->
+  <div class="form-step active" id="step1">
+    <div class="step-header">
+      <div class="section-tag">Step 1 of 5</div>
+      <h2>Tell Us About You</h2>
+      <p>Basic info to personalize your assessment results.</p>
+    </div>
+
+    <div class="form-group">
+      <label for="fullName">Your Full Name</label>
+      <input type="text" id="fullName" placeholder="e.g. Bhargavi N" />
+    </div>
+
+    <div class="form-group">
+      <label for="targetRole">Target Role / Domain</label>
+      <select id="targetRole">
+        <option value="">Select your target role</option>
+        <option value="sde">Software Development Engineer (SDE)</option>
+        <option value="frontend">Frontend Developer</option>
+        <option value="backend">Backend Developer</option>
+        <option value="fullstack">Full Stack Developer</option>
+        <option value="data">Data Scientist / ML Engineer</option>
+        <option value="devops">DevOps / Cloud Engineer</option>
+        <option value="mobile">Mobile Developer</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Years of experience / education level</label>
+      <div class="radio-grid">
+        <div class="radio-option">
+          <input type="radio" id="exp1" name="experience" value="student"/>
+          <label for="exp1">🎓 Student</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="exp2" name="experience" value="fresh"/>
+          <label for="exp2">🌱 Fresh Grad</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="exp3" name="experience" value="1-2"/>
+          <label for="exp3">📅 1–2 Years</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="exp4" name="experience" value="3+"/>
+          <label for="exp4">🚀 3+ Years</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-nav">
+      <span></span>
+      <button class="btn-nav btn-next">Next: Technical Skills →</button>
+    </div>
+  </div>
+
+  <!-- STEP 2: TECHNICAL -->
+  <div class="form-step" id="step2">
+    <div class="step-header">
+      <div class="section-tag">Step 2 of 5</div>
+      <h2>Technical Skills</h2>
+      <p>Let us know your technical strengths and areas of practice.</p>
+    </div>
+
+    <div class="form-group">
+      <label>Which technologies/skills are you comfortable with? (select all that apply)</label>
+      <div class="checkbox-list">
+        <div class="checkbox-option">
+          <input type="checkbox" id="ts1" name="techSkills" value="dsa"/>
+          <label for="ts1">Data Structures & Algorithms</label>
+        </div>
+        <div class="checkbox-option">
+          <input type="checkbox" id="ts2" name="techSkills" value="system_design"/>
+          <label for="ts2">System Design</label>
+        </div>
+        <div class="checkbox-option">
+          <input type="checkbox" id="ts3" name="techSkills" value="databases"/>
+          <label for="ts3">Databases (SQL / NoSQL)</label>
+        </div>
+        <div class="checkbox-option">
+          <input type="checkbox" id="ts4" name="techSkills" value="frameworks"/>
+          <label for="ts4">Frameworks (React, Node, Django, etc.)</label>
+        </div>
+        <div class="checkbox-option">
+          <input type="checkbox" id="ts5" name="techSkills" value="cloud"/>
+          <label for="ts5">Cloud / DevOps (AWS, GCP, Docker)</label>
+        </div>
+        <div class="checkbox-option">
+          <input type="checkbox" id="ts6" name="techSkills" value="testing"/>
+          <label for="ts6">Testing & Code Quality</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="dsaLevel">How confident are you with DSA / Coding Problems? <span id="dsaVal" style="color:var(--accent)">3/5</span></label>
+      <input type="range" id="dsaLevel" min="1" max="5" value="3" oninput="document.getElementById('dsaVal').textContent=this.value+'/5'"/>
+      <div class="range-labels">
+        <span>Barely started</span>
+        <span>Can solve mediums</span>
+        <span>Crushing hards</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>How many personal/academic projects have you built?</label>
+      <div class="radio-grid">
+        <div class="radio-option">
+          <input type="radio" id="proj0" name="projects" value="0"/>
+          <label for="proj0">None yet</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="proj1" name="projects" value="1-2"/>
+          <label for="proj1">1–2</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="proj2" name="projects" value="3-5"/>
+          <label for="proj2">3–5</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="proj3" name="projects" value="6+"/>
+          <label for="proj3">6+</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-nav">
+      <button class="btn-nav btn-back">← Back</button>
+      <button class="btn-nav btn-next">Next: Resume →</button>
+    </div>
+  </div>
+
+  <!-- STEP 3: RESUME -->
+  <div class="form-step" id="step3">
+    <div class="step-header">
+      <div class="section-tag">Step 3 of 5</div>
+      <h2>Resume Quality</h2>
+      <p>Tell us about the current state of your resume.</p>
+    </div>
+
+    <div class="form-group">
+      <label>What does your resume currently include? (select all that apply)</label>
+      <div class="checkbox-list">
+        <div class="checkbox-option">
+          <input type="checkbox" id="r1" name="resumeHas" value="contact"/>
+          <label for="r1">Clear contact info & links (GitHub, LinkedIn)</label>
+        </div>
+        <div class="checkbox-option">
+          <input type="checkbox" id="r2" name="resumeHas" value="summary"/>
+          <label for="r2">Professional summary / objective</label>
+        </div>
+        <div class="checkbox-option">
+          <input type="checkbox" id="r3" name="resumeHas" value="metrics"/>
+          <label for="r3">Quantifiable impact metrics (e.g., "improved X by 40%")</label>
+        </div>
+        <div class="checkbox-option">
+          <input type="checkbox" id="r4" name="resumeHas" value="projects_section"/>
+          <label for="r4">Projects section with descriptions</label>
+        </div>
+        <div class="checkbox-option">
+          <input type="checkbox" id="r5" name="resumeHas" value="skills"/>
+          <label for="r5">Organized skills section</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Is your resume updated for the roles you're targeting?</label>
+      <div class="radio-grid">
+        <div class="radio-option">
+          <input type="radio" id="ru1" name="resumeUpdated" value="yes"/>
+          <label for="ru1">✅ Yes, tailored</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="ru2" name="resumeUpdated" value="partially"/>
+          <label for="ru2">🔄 Partially</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="ru3" name="resumeUpdated" value="no"/>
+          <label for="ru3">❌ Not yet</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Has your resume been reviewed by anyone (mentor, senior, online)?</label>
+      <div class="radio-grid">
+        <div class="radio-option">
+          <input type="radio" id="rr1" name="resumeReviewed" value="yes"/>
+          <label for="rr1">Yes, professionally</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="rr2" name="resumeReviewed" value="peers"/>
+          <label for="rr2">By peers/friends</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="rr3" name="resumeReviewed" value="no"/>
+          <label for="rr3">Not yet</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-nav">
+      <button class="btn-nav btn-back">← Back</button>
+      <button class="btn-nav btn-next">Next: Communication →</button>
+    </div>
+  </div>
+
+  <!-- STEP 4: COMMUNICATION -->
+  <div class="form-step" id="step4">
+    <div class="step-header">
+      <div class="section-tag">Step 4 of 5</div>
+      <h2>Communication & Behavioral Prep</h2>
+      <p>How ready are you to articulate your experience to interviewers?</p>
+    </div>
+
+    <div class="form-group">
+      <label for="mockInterviews">How many mock interviews have you done? <span id="mockVal" style="color:var(--accent)">0</span></label>
+      <input type="range" id="mockInterviews" min="0" max="10" value="0" oninput="document.getElementById('mockVal').textContent=this.value"/>
+      <div class="range-labels">
+        <span>None</span>
+        <span>5 sessions</span>
+        <span>10+</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="communicationConf">How confident are you in verbal communication? <span id="confVal" style="color:var(--accent)">3/5</span></label>
+      <input type="range" id="communicationConf" min="1" max="5" value="3" oninput="document.getElementById('confVal').textContent=this.value+'/5'"/>
+      <div class="range-labels">
+        <span>Very nervous</span>
+        <span>Comfortable</span>
+        <span>Very confident</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Do you know the STAR method for behavioral questions?</label>
+      <div class="radio-grid">
+        <div class="radio-option">
+          <input type="radio" id="star1" name="starMethod" value="yes"/>
+          <label for="star1">✅ Yes, I use it</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="star2" name="starMethod" value="heard"/>
+          <label for="star2">🤔 Heard of it</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="star3" name="starMethod" value="no"/>
+          <label for="star3">❌ Not sure what it is</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Have you prepared answers for common behavioral questions (Tell me about yourself, Strengths/Weaknesses, Conflict situations)?</label>
+      <div class="radio-grid">
+        <div class="radio-option">
+          <input type="radio" id="beh1" name="behavioralPrep" value="yes"/>
+          <label for="beh1">✅ Fully prepared</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="beh2" name="behavioralPrep" value="partial"/>
+          <label for="beh2">🔄 Some of them</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="beh3" name="behavioralPrep" value="no"/>
+          <label for="beh3">❌ Not yet</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-nav">
+      <button class="btn-nav btn-back">← Back</button>
+      <button class="btn-nav btn-next">Next: Portfolio →</button>
+    </div>
+  </div>
+
+  <!-- STEP 5: PORTFOLIO -->
+  <div class="form-step" id="step5">
+    <div class="step-header">
+      <div class="section-tag">Step 5 of 5</div>
+      <h2>Portfolio & Online Presence</h2>
+      <p>Last section — your digital footprint matters to recruiters.</p>
+    </div>
+
+    <div class="form-group">
+      <label>Do you have an active GitHub profile with public repos?</label>
+      <div class="radio-grid">
+        <div class="radio-option">
+          <input type="radio" id="gh1" name="hasGithub" value="yes"/>
+          <label for="gh1">✅ Yes, active</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="gh2" name="hasGithub" value="profile"/>
+          <label for="gh2">Profile only</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="gh3" name="hasGithub" value="no"/>
+          <label for="gh3">❌ Not yet</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>How many projects are live/deployed (with a public URL)?</label>
+      <div class="radio-grid">
+        <div class="radio-option">
+          <input type="radio" id="pp0" name="portfolioProjects" value="0"/>
+          <label for="pp0">None yet</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="pp1" name="portfolioProjects" value="1-2"/>
+          <label for="pp1">1–2</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="pp2" name="portfolioProjects" value="3-5"/>
+          <label for="pp2">3–5</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="pp3" name="portfolioProjects" value="6+"/>
+          <label for="pp3">6+</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>How many relevant certifications do you have (Coursera, AWS, Google, etc.)?</label>
+      <div class="radio-grid">
+        <div class="radio-option">
+          <input type="radio" id="cert0" name="certs" value="none"/>
+          <label for="cert0">None</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="cert1" name="certs" value="1"/>
+          <label for="cert1">1</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="cert2" name="certs" value="2-3"/>
+          <label for="cert2">2–3</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="cert3" name="certs" value="4+"/>
+          <label for="cert3">4+</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Do you have an updated LinkedIn profile?</label>
+      <div class="radio-grid">
+        <div class="radio-option">
+          <input type="radio" id="li1" name="hasLinkedin" value="yes"/>
+          <label for="li1">✅ Yes, complete</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="li2" name="hasLinkedin" value="basic"/>
+          <label for="li2">Basic profile</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="li3" name="hasLinkedin" value="no"/>
+          <label for="li3">❌ Not yet</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-nav">
+      <button class="btn-nav btn-back">← Back</button>
+      <button class="btn-nav btn-submit btn-next" id="submitAssessment">🚀 Get My Score!</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/assessment.js"></script>
+</body>
+</html>
