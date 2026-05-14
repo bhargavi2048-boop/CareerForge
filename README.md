@@ -17,7 +17,7 @@
 
 <br/>
 
-[🚀 Live Demo](#) · [📋 Take Assessment](#) · [📖 Documentation](#table-of-contents) · [👑 Meet the Team](#-team)
+[🚀 Live Demo](#https://bhargavi2048-boop.github.io/CareerForge/) · [📋 Take Assessment](#) · [📖 Documentation](#table-of-contents) · [👑 Meet the Team](#-team)
 
 <br/>
 
