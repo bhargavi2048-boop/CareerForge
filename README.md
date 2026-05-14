@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/AI%20CareerForge-Hackathon%202025-3b82f6?style=for-the-badge&logo=lightning&logoColor=white" alt="AI CareerForge"/>
+<img src="https://img.shields.io/badge/AI%20CareerForge-Hackathon%202026-3b82f6?style=for-the-badge&logo=lightning&logoColor=white" alt="AI CareerForge"/>
 
 # ⚡ AI CareerForge
 ### *Know Your Interview Readiness Score — Before It's Too Late*
@@ -310,7 +310,7 @@ npx serve .
 
 ## 🏆 Hackathon Challenge
 
-**Event:** AI CareerForge Hackathon 2025  
+**Event:** AI CareerForge Hackathon 2026  
 **Category:** Interview Readiness  
 **Challenge:** *Design and develop a solution that evaluates different aspects of interview preparation — Technical Skills, Resume, Communication gaps, Portfolio — and provides an overall "Interview Readiness Score" with personalized improvement plans. The evaluation process should not take more than 2 minutes.*
 
@@ -331,7 +331,7 @@ npx serve .
 ```
 MIT License
 
-Copyright (c) 2025 Bhargavi N — AI CareerForge
+Copyright (c) 2026 Bhargavi N — AI CareerForge
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -352,7 +352,7 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 <div align="center">
 
-**Built with ❤️ by Bhargavi N · AI CareerForge Hackathon 2025**
+**Built with ❤️ by Bhargavi N · AI CareerForge Hackathon 2026**
 
 ⭐ *If this project helped you, consider starring the repo!*
 
