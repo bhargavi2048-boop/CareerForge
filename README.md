@@ -51,7 +51,7 @@
 
 ## 🎯 Overview
 
-**AI CareerForge** is a fully client-side, AI-powered interview readiness platform built for the *AI CareerForge Hackathon 2025*. It enables students and fresh graduates to assess their interview preparedness across four critical dimensions in under two minutes — and receive an actionable improvement roadmap before they ever face a recruiter.
+**AI CareerForge** is a fully client-side, AI-powered interview readiness platform built for the *AI CareerForge Hackathon 2026*. It enables students and fresh graduates to assess their interview preparedness across four critical dimensions in under two minutes — and receive an actionable improvement roadmap before they ever face a recruiter.
 
 The platform eliminates the most painful part of job searching: discovering your preparation gaps *after* a failed interview.
 
